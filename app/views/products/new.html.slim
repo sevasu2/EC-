@@ -1,0 +1,22 @@
+h1　
+  | 商品登録
+
+/ - if product.errors.present?
+/   ul#error_explanation
+/     - product.errors.full_messages.each do |message|
+/       li= message
+
+= form_with model: @product, local: true do |f|
+  .form-group
+    = f.label :name
+    = f.text_field :name, class: 'form-control', id: 'product_name'
+  .form-group
+    = f.label :description
+    = f.text_area :description, rows: 5, class: 'form-control', id: 'product_description'
+    .form-group
+    = f.label :price
+    = f.text_field :price, rows: 5, class: 'form-control', id: 'product_price'
+    .form-group
+    = f.label :unit
+    = f.text_field :unit, rows: 5, class: 'form-control', id: 'product_unit'
+  = f.submit nil, class: 'btn btn-primary'
