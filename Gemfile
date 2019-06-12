@@ -38,6 +38,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'faker'
 end
 
 group :development do
@@ -48,6 +49,8 @@ group :development do
 
   # 追加gem
   gem 'letter_opener'
+  # モデルにデータのメモを表示するgem
+  gem 'annotate'
 end
 
 group :test do
@@ -63,10 +66,15 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # 追加gem
 
+# フロント
 gem 'bootstrap'
+gem 'slim-rails'
+gem 'html2slim'
 
 # 翻訳設定
 gem 'rails-i18n', '~> 5.1'
 
 # ログイン機能
 gem 'devise'
+
+gem 'active_decorator'
