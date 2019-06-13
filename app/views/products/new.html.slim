@@ -13,10 +13,13 @@ h1　
   .form-group
     = f.label :description
     = f.text_area :description, rows: 5, class: 'form-control', id: 'product_description'
-    .form-group
+  .form-group
     = f.label :price
     = f.text_field :price, rows: 5, class: 'form-control', id: 'product_price'
-    .form-group
+  .form-group
     = f.label :unit
     = f.select :unit, Product.unit.options, rows: 5, class: 'form-control', id: 'product_price'
+  .form-group
+    = f.label :image
+    = f.file_field :image,  class: 'form-control'
   = f.submit nil, class: 'btn btn-primary'

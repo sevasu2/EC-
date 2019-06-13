@@ -3,6 +3,8 @@ h1
 - @products.each do |product|
   product
     p
+     = image_tag @product.image_url if @product.present?
+    p
      = product.name
     p
      = product.display_price

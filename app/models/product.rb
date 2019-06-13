@@ -1,4 +1,7 @@
 class Product < ApplicationRecord
+  mount_uploader :image, ImageUploader
+
+  %w(jpg jpeg gif png)
 
   extend Enumerize
   enumerize :unit, in: [:yen, :usd]
