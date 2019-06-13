@@ -8,16 +8,18 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(product_params)
-      redirect_to @product, notice: "商品「#{@product.name}」を登録しました。"
+    @product = Product.new(product_params) #入力した値が失敗した時も残るようにするため
+    if @product.save
+      redirect_to products_path, notice: "商品「#{@product.name}」を登録しました。"
     else
       flash[:error] = '作成に失敗'
       render :new
+    end
   end
 
   private
 
-  def task_params
+  def product_params
     params.require(:product).permit(:name, :description, :price, :unit)
   end
 

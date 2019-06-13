@@ -82,4 +82,6 @@ gem 'carrierwave'
 
 #デコレーター
 gem 'active_decorator'
+
+gem 'enumerize'
 #------------------------------------------------------------------
