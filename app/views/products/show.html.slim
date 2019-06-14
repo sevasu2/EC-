@@ -9,5 +9,6 @@ p
 p
   = @product.display_price
 
+= link_to product_add_to_baskets_path(@product), method: :post do
   .btn.btn-large
-    買い物かごに入れる
+  p  '買い物かごに入れる', class: 'btn btn-primary'
