@@ -5,11 +5,11 @@ class Product < ApplicationRecord
 
   extend Enumerize
   enumerize :unit, in: [:yen, :usd]
-
 #----------------------------------------
 #  ** Association **
 #----------------------------------------
-has_many :basket_products, dependent: :destroy
+  has_many :basket_products, dependent: :destroy
+  has_many :purchase_product_records, dependent: :destroy
 
 #----------------------------------------
 #  ** Validations **

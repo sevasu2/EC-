@@ -39,6 +39,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'faker'
+  # 環境変数の設定
+  gem 'dotenv-rails'
 end
 
 group :development do
@@ -84,4 +86,5 @@ gem 'carrierwave'
 gem 'active_decorator'
 
 gem 'enumerize'
+gem 'stripe'
 #------------------------------------------------------------------
